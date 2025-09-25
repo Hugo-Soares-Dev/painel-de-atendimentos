@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const QRCode = require('qrcode');
 
-const url = process.env.BASE_URL || "http://localhost:3000/cliente.html"; // Troque pela sua URL real
+const url = process.env.BASE_URL || "http://paineldeatendimento.onrender/cliente.html"; // Troque pela sua URL real
 
 QRCode.toFile('qrcode.png', url, function (err) {
     if (err) throw err;
