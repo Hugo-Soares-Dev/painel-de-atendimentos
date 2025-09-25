@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sua Senha de Atendimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #0984e3;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+        }
+        .senha {
+            font-size: 5rem;
+            color: #00b894;
+            margin-top: 3rem;
+            font-weight: bold;
+            background: #dff9fb;
+            border: 2px solid #00b894;
+            border-radius: 12px;
+            padding: 2rem 4rem;
+            display: inline-block;
+        }
+        .info {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #636e72;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua senha de atendimento</h1>
+    <div id="senha" class="senha">...</div>
+    <div class="info">Aguarde ser chamado no painel.</div>
+    <script>
+        fetch('/api/gerar-senha')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('senha').textContent = data.senha;
+            })
+            .catch(() => {
+                document.getElementById('senha').textContent = 'Erro ao gerar senha';
+            });
+    </script>
+</body>
+</html>

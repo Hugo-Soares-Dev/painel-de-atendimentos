@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Painel de Atendimento</h1>
+        <div style="margin-bottom: 2vw; text-align: center;">
+            <h2>Escaneie para gerar sua senha</h2>
+            <img src="qrcode.png" alt="QR Code para gerar senha" style="width: 20vw; max-width: 300px;">
+            <p>Use seu celular para escanear e gerar sua senha de atendimento!</p>
+        </div>
+        <div class="painel-row">
+            <div class="painel-col">
+                <h2>Senhas Criadas</h2>
+                <ul id="lista-senhas-criadas"></ul>
+            </div>
+            <div class="painel-col">
+                <h2>Senha Chamada</h2>
+                <div id="senha-chamada"></div>
+            </div>
+            <div class="painel-col">
+                <h2>Senhas Já Chamadas</h2>
+                <ul id="lista-senhas-chamadas"></ul>
+            </div>
+        </div>
+        <div>
+            <button id="btn-gerar-senha">Gerar Senha</button>
+            <button id="btn-chamar-senha">Chamar Senha</button>
+        </div>
+    </div>
+    <script src="painel.js"></script>
+</body>
+</html>
