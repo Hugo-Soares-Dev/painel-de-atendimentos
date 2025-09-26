@@ -13,7 +13,7 @@ function gerarSenha(req, res) {
 }
 
 // Exemplo para uso com Express.js:
-const express = require('express');
+const express = require('express'); 
 const app = express();
 const port = process.env.PORT || 3000;
 const path = require('path');
@@ -45,7 +45,7 @@ app.get('/cliente.html', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`API de senhas rodando em http://localhost:${port}/api/gerar-senha`);
+    console.log(`API de senhas rodando na porta ${port}`);
 });
 
 module.exports = gerarSenha;
