@@ -4,7 +4,7 @@
   "description": "Este projeto é um painel web simples para gerenciamento de senhas de atendimento, ideal para uso em TVs grandes, monitores ou qualquer tela fixa em ambientes de recepção.",
   "main": "gerar-senha.js",
   "scripts": {
-    "start": "node gerar-senha.js",
+    "start": "node gerar-qrcode.js && node gerar-senha.js", 
     "gerar-senha": "node gerar-senha.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
