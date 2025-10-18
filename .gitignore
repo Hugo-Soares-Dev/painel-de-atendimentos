@@ -1,0 +1,32 @@
+# ------------------------------------
+# 1. DEPENDÊNCIAS E CACHE (Node.js)
+# ------------------------------------
+# A pasta node_modules é sempre ignorada. Ela contém as bibliotecas do projeto.
+/node_modules
+/package-lock.json
+
+# ------------------------------------
+# 2. ARQUIVOS GERADOS E DE SAÍDA
+# ------------------------------------
+# Seu projeto gera o QR Code; ele não precisa ser versionado.
+/qrcode.png
+
+# ------------------------------------
+# 3. VARIÁVEIS DE AMBIENTE E DADOS SENSÍVEIS
+# ------------------------------------
+# Este é o ponto mais CRÍTICO. Arquivos .env contêm segredos (chaves, senhas).
+.env
+.env.*
+
+# ------------------------------------
+# 4. ARQUIVOS DE LOG E TEMPORÁRIOS
+# ------------------------------------
+# Ignora arquivos de log e debug.
+*.log
+
+# ------------------------------------
+# 5. ARQUIVOS DE SISTEMA E AMBIENTE (Opcional, mas útil)
+# ------------------------------------
+# Ignora pastas de IDEs e sistemas operacionais.
+.vscode/ # Pasta de configurações do VS Code
+.DS_Store # Arquivo de metadados do macOS
