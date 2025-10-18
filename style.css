@@ -1,0 +1,175 @@
+/* 1. Ajustes de Tela Cheia (Full Viewport) - Mantido */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* ALTO CONTRASTE: Fundo Branco Puro */
+    background-color: #FFFFFF;
+    /* ALTO CONTRASTE: Cor do texto padrão Preto */
+    color: #000000;
+}
+
+/* 2. Configuração do Container Principal - Mantido */
+.main-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    /* ALTO CONTRASTE: Borda preta forte */
+    border: 3px solid #000000;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-rows: 85% 15%;
+}
+
+/* 3. Posicionamento dos Blocos no Grid Principal - Mantido */
+.side-panel {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 50% 20% 30%;
+    gap: 8px;
+    /* ALTO CONTRASTE: Fundo Cinza Quase Branco */
+    background-color: #F0F0F0;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+}
+
+.youtube-area {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    /* ALTO CONTRASTE: Fundo Branco Puro */
+    background-color: #FFFFFF;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+}
+
+.painel-row {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+}
+
+/* 4. Estilização dos Blocos Laterais (QR CODE e Cores) */
+
+.qr-code-area {
+    grid-row: 1 / 2;
+    /* ALTO CONTRASTE: Fundo Cinza Quase Branco */
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 1vh 1vw;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+}
+
+.qr-code-area h2 {
+    font-size: 2.5vh;
+    margin: 0 0 1vh 0;
+    flex-shrink: 0;
+    /* Já herda a cor preta do body/html */
+}
+
+.qr-code-area img {
+    /* Manutenção do ajuste para o QR Code (quadrado, sem distorção) */
+    flex-grow: 1;
+    width: 90%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* B. Botões (ALTO CONTRASTE) */
+.buttons-container {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 5px;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+}
+
+#btn-gerar-senha,
+#btn-chamar-senha {
+    font-size: 2.5vh;
+    font-weight: bold;
+    /* ALTO CONTRASTE: Verde Limão Brilhante */
+    background-color: #7CFC00;
+    /* ALTO CONTRASTE: Texto preto para contraste máximo sobre o verde */
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    width: 100%;
+    height: 45%;
+    margin: 2px 0;
+}
+
+/* C. Senhas Criadas (Lista lateral) - Mantido */
+.side-panel-list {
+    grid-row: 3 / 4;
+    /* ALTO CONTRASTE: Fundo Cinza Quase Branco */
+    background-color: #F0F0F0;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 5. Estilos de Conteúdo e Rodapé (Alto Contraste) */
+
+/* 2. AJUSTE: Separar visualmente as áreas do rodapé (Colunas do .painel-row) */
+.painel-col {
+    /* ALTO CONTRASTE: Fundo Branco Puro */
+    background-color: #FFFFFF;
+    /* ALTO CONTRASTE: Borda preta */
+    border: 1px solid #000000;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    /* Cor do texto já é preta */
+}
+
+.painel-col h2,
+.side-panel-list h2 {
+    font-size: 3vh;
+    margin-top: 0;
+    text-align: center;
+    /* Cor do texto já é preta */
+}
+
+.painel-col ul,
+.painel-col div,
+.side-panel-list ul {
+    font-size: 3.5vh;
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* Cor do texto já é preta */
+}
+
+#senha-chamada {
+    font-size: 5vh;
+    font-weight: bold;
+    /* ALTO CONTRASTE: Ciano Brilhante (Alto Contraste) */
+    color: #00BFFF;
+}
