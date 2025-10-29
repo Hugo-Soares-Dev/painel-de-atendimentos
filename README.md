@@ -4,17 +4,21 @@ Seja bem-vindo ao **Painel de Atendimento Digitalizado**, um protótipo web proj
 
 Este projeto cumpre um duplo papel: **eliminar o uso de papel** (digitalização) e fornecer uma **interface de alto contraste** com acessibilidade sonora.
 
+> **Inspiração e Objetivo:** A principal motivação deste desenvolvimento foi atender às **leis de incentivo à digitalização e desburocratização**, focando na diminuição drástica do consumo de papel em instituições públicas e privadas.
+
+> 💡 **Observação sobre o Protótipo no Render:** Este projeto está hospedado em um plano gratuito do **Render**. Devido às limitações de servidor, o painel pode apresentar latência ou lentidão na resposta inicial, especialmente se ficar inativo por longos períodos. Em um ambiente de produção real, recomenda-se uma solução de hospedagem paga.
+
 ---
 
 ## ✨ Destaques e Funcionalidades
 
 | Recurso | Descrição | Status |
 | :--- | :--- | :--- |
-| **Geração de Senha via QR Code** | O cliente escaneia o QR Code para gerar sua senha no próprio celular, eliminando a impressão de papel e promovendo a digitalização. | ✅ Implementado (`gerar-qrcode.js`) |
-| **Autonomia de Fila** | O estado da fila (senhas criadas/chamadas) é salvo no `Local Storage` do navegador (na TV), tornando o painel autônomo e persistente contra falhas de servidor. | ✅ Implementado (`painel.js`) |
-| **Acessibilidade Visual** | Uso de uma paleta de cores de **Alto Contraste** (Fundo Claro / Texto Preto / Destaques Ciano e Verde-Limão) para máxima legibilidade e conformidade com normas. | ✅ Implementado (`style.css`) |
-| **Acessibilidade Sonora** | Utiliza a API `SpeechSynthesis` do navegador para **falar a senha chamada** em português, auxiliando usuários com baixa visão ou deficiência visual. | ✅ Implementado (`painel.js`) |
-| **Design Responsivo** | Layout baseado em Grid e Flexbox para adaptação a diferentes tamanhos de TV ou monitores. | ✅ Implementado (`style.css`) |
+| **Geração de Senha via QR Code** | O cliente escaneia o QR Code para gerar sua senha no próprio celular, eliminando a impressão de papel e promovendo a digitalização. | ✅ Implementado |
+| **Autonomia de Fila** | O estado da fila (senhas criadas/chamadas) é salvo no `Local Storage` do navegador (na TV), tornando o painel autônomo e persistente contra falhas de servidor. | ✅ Implementado |
+| **Acessibilidade Visual** | Uso de uma paleta de cores de **Alto Contraste** (Fundo Claro / Texto Preto / Destaques Ciano e Verde-Limão) para máxima legibilidade e conformidade com normas. | ✅ Implementado |
+| **Acessibilidade Sonora** | Utiliza a API `SpeechSynthesis` do navegador para **falar a senha chamada** em português, auxiliando usuários com baixa visão ou deficiência visual. | ✅ Implementado |
+| **Design Responsivo** | Layout baseado em Grid e Flexbox para adaptação a diferentes tamanhos de TV ou monitores. | ✅ Implementado |
 
 ---
 
@@ -64,7 +68,5 @@ O projeto requer Node.js para rodar os scripts de inicialização e o servidor w
     (Este comando irá gerar o `qrcode.png` e iniciar o servidor Express na porta 3000 ou na porta definida pelo Render.)
 
 4.  **Acesse:** Abra o navegador em `http://localhost:3000/index.html`.
-
-> ⚠️ **Observação sobre o Protótipo no Render:** Este projeto está hospedado em um plano gratuito do Render. Devido às limitações de servidor (que podem hibernar), o painel pode apresentar latência na primeira interação. Em um ambiente de produção real, é essencial usar uma solução de hospedagem dedicada.
 
 ---
